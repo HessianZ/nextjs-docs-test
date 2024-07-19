@@ -1,5 +1,6 @@
 import React from 'react'
 import { DocsThemeConfig } from 'nextra-theme-docs'
+import { Analytics } from "@vercel/analytics/react"
 
 const config: DocsThemeConfig = {
   logo: <span>Hessian</span>,
@@ -11,7 +12,12 @@ const config: DocsThemeConfig = {
   },
   docsRepositoryBase: 'https://github.com/shuding/nextra-docs-template',
   footer: {
-    text: 'Nextra Docs Template',
+    text: (
+      <div>
+        <p><a href="https://hessian.cn/" target="_blank">Hessian's Blog</a></p>
+        <Analytics />
+      </div>
+    ),
   },
 }
 
